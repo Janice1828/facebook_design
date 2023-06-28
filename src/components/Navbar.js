@@ -1,6 +1,6 @@
 import Form from "react-bootstrap/Form";
 import { Row, Col } from "react-bootstrap";
-import { FaFacebook, FaFontAwesome } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
 import { GiBlockHouse } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi";
@@ -10,9 +10,9 @@ import { IoMdNotifications } from "react-icons/io";
 import { BsMessenger } from "react-icons/bs";
 import { BiSolidUser } from "react-icons/bi";
 import { IconContext } from "react-icons";
-import { BsSearch } from "react-icons/bs";
+import { Link } from "react-router-dom";
 function TextControlsExample() {
-  const placeHolderIcons = <BsSearch />;
+  // const placeHolderIcons = <BsSearch />;
   return (
     <>
       <Row className="px-4 py-2 shadow align-items-center mb-3">
@@ -30,10 +30,18 @@ function TextControlsExample() {
         </Col>
         <Col className="d-flex justify-content-around">
           <IconContext.Provider value={{ color: "#65676B", size: "25px" }}>
-            <AiFillHome></AiFillHome>
-            <GiBlockHouse></GiBlockHouse>
-            <HiUserGroup></HiUserGroup>
-            <CgGames></CgGames>
+            <Link to="/">
+              <AiFillHome></AiFillHome>
+            </Link>
+            <Link to="/market">
+              <GiBlockHouse></GiBlockHouse>
+            </Link>
+            <Link to="/group">
+              <HiUserGroup></HiUserGroup>
+            </Link>
+            <Link to="/gaming">
+              <CgGames></CgGames>
+            </Link>
           </IconContext.Provider>
         </Col>
         <Col className="d-flex gap-3 justify-content-end">
@@ -45,6 +53,7 @@ function TextControlsExample() {
             }}
           >
             <TbGridDots className="p-1 rounded-4"></TbGridDots>
+
             <BsMessenger className="p-1 rounded-4"></BsMessenger>
             <IoMdNotifications className="p-1 rounded-4"></IoMdNotifications>
             <BiSolidUser className="p-1 rounded-4"></BiSolidUser>

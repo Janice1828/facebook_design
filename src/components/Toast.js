@@ -7,10 +7,10 @@ import ronb from "../img/user.jpg";
 
 function DismissibleExample() {
   const [showA, setShowA] = useState(true);
-  const [showB, setShowB] = useState(true);
+  // const [showB, setShowB] = useState(true);
 
   const toggleShowA = () => setShowA(!showA);
-  const toggleShowB = () => setShowB(!showB);
+  // const toggleShowB = () => setShowB(!showB);
 
   return (
     <div

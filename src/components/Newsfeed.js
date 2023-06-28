@@ -5,10 +5,8 @@ import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import ModalInput from "./Modal";
-import Button from "react-bootstrap/Button";
 
 import { BiSolidUser } from "react-icons/bi";
-import NewsfeedContent from "./NewsfeedContent";
 import DismissibleExample from "./Toast";
 import Stories from "./Stories";
 import Reels from "./Reels";
@@ -63,7 +61,6 @@ const Newsfeed = () => {
           </div>
         </Card.Body>
       </Card>
-      <NewsfeedContent />
       <DismissibleExample />
     </>
   );
