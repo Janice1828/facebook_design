@@ -10,13 +10,15 @@ const Home = () => {
       <Container fluid>
         <Navbar />
         <div className="row">
-          <div className="col-4">
-            <Shortcuts />
+          <div className="col-3">
+            <div className="position-fixed shortcut">
+              <Shortcuts />
+            </div>
           </div>
-          <div className="col-4">
+          <div className="col-6 px-5">
             <Newsfeed />
           </div>
-          <div className="col-4">
+          <div className="col-3">
             <Contacts />
           </div>
         </div>

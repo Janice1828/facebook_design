@@ -43,3 +43,14 @@
   z-index: 1000;
   background: #fff;
 }
+.border-shortcut {
+  width: 335px;
+  border-bottom: 1px solid #000;
+}
+.shortcut {
+  position: fixed;
+  overflow-y: auto;
+  bottom: 0;
+  top: 80px;
+  width: 100%;
+}
