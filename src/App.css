@@ -11,7 +11,7 @@
   cursor: pointer;
   background: none;
 }
-.active::after {
+.navlink .active::after {
   content: "";
   width: 120px;
   display: block;
@@ -19,6 +19,21 @@
   bottom: -18px;
   border-bottom: 3px solid hsl(214, 89%, 52%);
   padding-bottom: 20px;
+}
+.reelsstories .active {
+  color: #0d6efd !important;
+  display: flex;
+  justify-content: center;
+}
+.reelsstories .active::after {
+  content: "";
+  width: 220px;
+  display: block;
+  position: absolute;
+  border-bottom: 3px solid hsl(214, 89%, 52%);
+  padding-bottom: 20px;
+  margin-left: 38px;
+  top: 111px;
 }
 
 #navLink {
@@ -52,5 +67,26 @@
   overflow-y: auto;
   bottom: 0;
   top: 80px;
-  width: 100%;
+  width: 25%;
+}
+.marketsettin {
+  position: fixed;
+  overflow-y: auto;
+  bottom: 0;
+
+  top: 80px;
+}
+#profileImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #0d6efd;
+  padding: 4px;
+}
+#story {
+  overflow-x: scroll;
+}
+#inp input {
+  width: 36em;
+  border-radius: 20px;
 }

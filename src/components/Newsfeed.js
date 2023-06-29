@@ -8,22 +8,26 @@ import ModalInput from "./Modal";
 
 import { BiSolidUser } from "react-icons/bi";
 import DismissibleExample from "./Toast";
-import Stories from "./Stories";
-import Reels from "./Reels";
+import Stories from "../Home/Stories";
+import Reels from "../Home/Reels";
 const Newsfeed = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-        <Row>
+        <Row className="reelsstories">
           <Col sm={12}>
             <Nav variant="" className="d-flex justify-content-around">
               <Nav.Item>
-                <Nav.Link eventKey="first">Stories</Nav.Link>
+                <Nav.Link eventKey="first" className="text-dark">
+                  Stories
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">Reels</Nav.Link>
+                <Nav.Link eventKey="second" className="text-dark">
+                  Reels
+                </Nav.Link>
               </Nav.Item>
             </Nav>
             <hr />
@@ -40,23 +44,27 @@ const Newsfeed = () => {
           </Col>
         </Row>
       </Tab.Container>
-      <Card>
+      <Card className="mt-3" id="inp">
         <Card.Body>
           <BiSolidUser></BiSolidUser>
-          <ModalInput show={modalShow} onHide={() => setModalShow(false)} />
+          <ModalInput
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+            width="200px"
+          />
           <hr />
           <div className="d-flex justify-content-around">
-            <Card.Text className="d-flex">
+            <Card.Text className="d-flex align-items-center gap-2">
               <BiSolidUser></BiSolidUser>
-              <p>Live Video</p>
+              <strong>Live Video</strong>
             </Card.Text>
-            <Card.Text className="d-flex">
+            <Card.Text className="d-flex align-items-center gap-2">
               <BiSolidUser></BiSolidUser>
-              <p>Photo/Video</p>
+              <strong>Photo/Video</strong>
             </Card.Text>
-            <Card.Text className="d-flex">
+            <Card.Text className="d-flex  align-items-center gap-2">
               <BiSolidUser></BiSolidUser>
-              <p>Feeling/Activity</p>
+              <strong>Feeling/Activity</strong>
             </Card.Text>
           </div>
         </Card.Body>

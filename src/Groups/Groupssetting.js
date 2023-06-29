@@ -1,24 +1,82 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Form } from "react-bootstrap";
 const Groupssetting = () => {
   return (
     <>
-      <Row className="d-flex flex-column">
-        <Col>Setting</Col>
-        <Col>
-          <input type="" name="" value="" />
-        </Col>
-        <Col>Your Feed</Col>
-        <Col>Discover</Col>
-        <Col>Your Groups</Col>
-        <Col>Create New Groups</Col>
-        <Col>Grous You Have Joined</Col>
-        <Col>It Internship and jobs</Col>
-        <Col>react js developer</Col>
-        <Col>Intern Nepal</Col>
-        <Col>Internsathi</Col>
-        <Col>It jobs in nepal</Col>
-      </Row>
+      <div className="marketsettin w-25">
+        <Row className="d-flex flex-column gap-2  ">
+          <Col>
+            <h6>Groups</h6>
+          </Col>
+          <Col>
+            <h6>
+              <Form>
+                <Form.Control></Form.Control>
+              </Form>
+            </h6>
+          </Col>
+          <Col>
+            <h6>Your Feed</h6>
+          </Col>
+          <Col>
+            <h6>Discover</h6>
+          </Col>
+          <Col>
+            <h6>Your Groups</h6>
+          </Col>
+          <Col>
+            <h6>Create New Groups</h6>
+          </Col>
+          <Col>
+            <h6>Grous You Have Joined</h6>
+          </Col>
+          <Col>
+            <h6>It Internship and jobs</h6>
+          </Col>
+          <Col>
+            <h6>react js developer</h6>
+          </Col>
+          <Col>
+            <h6>Intern Nepal</h6>
+          </Col>
+          <Col>
+            <h6>Internsathi</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+          <Col>
+            <h6>It jobs in nepal</h6>
+          </Col>
+        </Row>
+      </div>
     </>
   );
 };

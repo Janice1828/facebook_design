@@ -58,20 +58,20 @@ const Shortcuts = () => {
           <BiSolidUser size="25px" />
           <h6>Intern Apply</h6>
         </div>
-        <div className="d-flex align-items-center">
-          <span>Privacy</span>
-          <span>.</span>
-          <span>Terms</span>
-          <span>.</span>
-          <span>Advertising</span>
-          <span>.</span>
-          <span>Ad Choices</span>
-          <span>.</span>
-          <span>Cookies</span>
-          <span>.</span>
-          <span>More</span>
-          <span>.</span>
-          <span>Meta &copy; 2023</span>
+        <div className="">
+          <small>Privacy</small>
+          <small>.</small>
+          <small>Terms</small>
+          <small>.</small>
+          <small>Advertising</small>
+          <small>.</small>
+          <small>Ad Choices</small>
+          <small>.</small>
+          <small>Cookies</small>
+          <small>.</small> <br />
+          <small>More</small>
+          <small>.</small>
+          <small>Meta &copy; 2023</small>
         </div>
       </div>
     </>

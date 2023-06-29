@@ -2,7 +2,7 @@ import React from "react";
 import { BiSolidUser } from "react-icons/bi";
 const Contacts = () => {
   return (
-    <div className="d-flex flex-column">
+    <div className="d-flex flex-column gap-3 shortcut">
       <h6>Contacts</h6>
       <div className="d-flex gap-2 align-items-center">
         <BiSolidUser size="25px"></BiSolidUser>
@@ -43,6 +43,14 @@ const Contacts = () => {
       <div className="d-flex gap-2 align-items-center">
         <BiSolidUser size="25px"></BiSolidUser>
         <h6>Ram Chemjong</h6>
+      </div>
+      <div className="d-flex gap-2 align-items-center">
+        <BiSolidUser size="25px"></BiSolidUser>
+        <h6>Manoj Rai</h6>
+      </div>
+      <div className="d-flex gap-2 align-items-center">
+        <BiSolidUser size="25px"></BiSolidUser>
+        <h6>Solti Chemjong</h6>
       </div>
       <div className="d-flex gap-2 align-items-center">
         <BiSolidUser size="25px"></BiSolidUser>
