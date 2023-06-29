@@ -10,9 +10,8 @@ import { IoMdNotifications } from "react-icons/io";
 import { BsMessenger } from "react-icons/bs";
 import { BiSolidUser } from "react-icons/bi";
 import { IconContext } from "react-icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function TextControlsExample() {
-  // const placeHolderIcons = <BsSearch />;
   return (
     <>
       <Row className="px-4 py-2 shadow align-items-center mb-3">
@@ -23,25 +22,25 @@ function TextControlsExample() {
               <Form.Control
                 type="text"
                 placeholder="Search Facebook"
-                style={{ borderRadius: "25px" }}
+                style={{ borderRadius: "20px", width: "215px" }}
               ></Form.Control>
             </Form.Label>
           </Form>
         </Col>
         <Col className="d-flex justify-content-around">
-          <IconContext.Provider value={{ color: "#65676B", size: "25px" }}>
-            <Link to="/">
+          <IconContext.Provider value={{}}>
+            <NavLink to="/" id="navLink">
               <AiFillHome></AiFillHome>
-            </Link>
-            <Link to="/market">
+            </NavLink>
+            <NavLink to="/market" id="navLink">
               <GiBlockHouse></GiBlockHouse>
-            </Link>
-            <Link to="/group">
+            </NavLink>
+            <NavLink to="/group" id="navLink">
               <HiUserGroup></HiUserGroup>
-            </Link>
-            <Link to="/gaming">
+            </NavLink>
+            <NavLink to="/gaming" id="navLink">
               <CgGames></CgGames>
-            </Link>
+            </NavLink>
           </IconContext.Provider>
         </Col>
         <Col className="d-flex gap-3 justify-content-end">
@@ -52,11 +51,12 @@ function TextControlsExample() {
               className: "bg-secondary bg-opacity-50",
             }}
           >
-            <TbGridDots className="p-1 rounded-4"></TbGridDots>
+            <TbGridDots className="navIcons"></TbGridDots>
 
-            <BsMessenger className="p-1 rounded-4"></BsMessenger>
-            <IoMdNotifications className="p-1 rounded-4"></IoMdNotifications>
-            <BiSolidUser className="p-1 rounded-4"></BiSolidUser>
+            <BsMessenger className="navIcons"></BsMessenger>
+
+            <IoMdNotifications className="navIcons"></IoMdNotifications>
+            <BiSolidUser className="navIcons"></BiSolidUser>
           </IconContext.Provider>
         </Col>
       </Row>
