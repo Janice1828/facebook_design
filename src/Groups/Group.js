@@ -1,24 +1,24 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Shortcuts from "../components/Shortcuts";
-import Newsfeed from "../components/Newsfeed";
 import Contacts from "../components/Contacts";
 import { Container } from "react-bootstrap";
 import Groupcontent from "../pageContent/Groupcontent";
+import Groupssetting from "./Groupssetting";
+import Chats from "./Chats";
 const Group = () => {
   return (
     <>
       <Container fluid>
         <Navbar />
         <div className="row">
-          <div className="col-4">
-            <Shortcuts />
+          <div className="col-3">
+            <Groupssetting />
           </div>
-          <div className="col-4">
+          <div className="col-6">
             <Groupcontent />
           </div>
-          <div className="col-4">
-            <Contacts />
+          <div className="col-3">
+            <Chats />
           </div>
         </div>
       </Container>
