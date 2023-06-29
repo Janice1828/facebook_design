@@ -3,9 +3,9 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Toast from "react-bootstrap/Toast";
-import ronb from "../img/user.jpg";
-
-function DismissibleExample() {
+import ronb from "../img/ronb.jpg";
+import newsFeedContent from "../Home/Newsfeedcontent";
+function Contentnews(props) {
   const [showA, setShowA] = useState(true);
   // const [showB, setShowB] = useState(true);
 
@@ -29,32 +29,33 @@ function DismissibleExample() {
             onClose={toggleShowA}
             style={{ width: "100%", padding: "0px" }}
           >
-            <Toast.Header className="d-flex justify-content-between align-items-center">
-              <div className="d-flex align-items-center gap-1">
-                <img src={ronb} alt="RONB" height="25px" width="25px" />
-                <strong style={{ fontSize: "15px" }}>
-                  Routine Of Nepal Banda
-                </strong>
+            <Toast.Header className="d-flex justify-content-between align-items-center border-0">
+              <div className="d-flex gap-1">
+                <img
+                  src={props.profilePicture}
+                  alt="RONB"
+                  height="40px"
+                  width="40px"
+                />
+                <strong style={{ fontSize: "15px" }}>{props.name}</strong>
               </div>
             </Toast.Header>
-            <Toast.Body className="w-100">
-              <p>
-                नेपाल आयल निगमले एक वर्षमा २४ अर्ब कमाएर भारतीय आयल निगमको सबै
-                ऋण तिरेको छ भने अब स्वचालित मूल्य लागू गर्ने पनि तयारी गरेको छ ।
-              </p>
+            <Toast.Body className="w-100 py-0">
+              <p>{props.content}</p>
               <img
-                src={ronb}
+                src={props.contentImage}
                 alt="Img Routine"
                 style={{ height: "width:100%", width: "100%" }}
               />
             </Toast.Body>
-            <div className="d-flex justify-content-between">
-              <div>415</div>
+            <div className="d-flex justify-content-between px-3">
+              <div>{props.like}</div>
               <div className="d-flex gap-2">
-                <div>20 comments</div>
-                <div>3 shares</div>
+                <div>{props.comment}</div>
+                <div>{props.share}</div>
               </div>
             </div>
+            <hr />
             <div className="d-flex justify-content-around">
               <button type="" id="like">
                 Like
@@ -73,5 +74,22 @@ function DismissibleExample() {
     </div>
   );
 }
+const DismissibleExample = () => {
+  return (
+    <>
+      {newsFeedContent.map((val) => (
+        <Contentnews
+          profilePicture={val.profile}
+          content={val.content}
+          contentImage={val.image}
+          like={val.like}
+          share={val.share}
+          comment={val.comment}
+          name={val.name}
+        />
+      ))}
+    </>
+  );
+};
 
 export default DismissibleExample;
