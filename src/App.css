@@ -76,6 +76,11 @@
 
   top: 80px;
 }
+#reButtons {
+  border: none;
+  background: none;
+  color: #000;
+}
 #profileImg {
   height: 40px;
   width: 40px;
