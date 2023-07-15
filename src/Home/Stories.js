@@ -1,82 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
-import profile from "../img/blog-1.jpg";
-import storyImg from "../img/team-2.jpg";
-import person from "../img/team-3.jpg";
+import profile from "../img/people10.jpg";
+import { GrAdd } from "react-icons/gr";
+import { GrAddCircle } from "react-icons/gr";
 import { BsHouseCheck } from "react-icons/bs";
-const Storiescard = (props) => {
-  return (
-    <div>
-      <Card>
-        <Card.Body>
-          <img
-            src={props.imgName}
-            alt="Stories Img"
-            height="180px"
-            width="125px"
-            style={{ borderRadius: "10px" }}
-          />
-          <img
-            src={props.profile}
-            alt="Profile"
-            style={{
-              position: "absolute",
-              left: "26px",
-              bottom: "140px",
-            }}
-            id="profileImg"
-          />
-          <span
-            style={{
-              color: "#fff",
-              position: "absolute",
-              left: "28px",
-              bottom: "22px",
-            }}
-          >
-            {props.name}
-          </span>
-        </Card.Body>
-      </Card>
-    </div>
-  );
-};
-const storiesDetails = [
-  {
-    storyName: "Tej maya Limbu",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Maya Imsong",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Sushma Imsong",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Bishnu Chemjong",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Dipa Rai",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Madan Chemjong",
-    img: storyImg,
-    profile: profile,
-  },
-];
+import axios from "axios";
+import Storiescard from "./Storiescard";
 const Stories = () => {
+  const [data, setData] = useState([]);
+  const storiesDetails = async () => {
+    const resonse = await axios.get("https://reqres.in/api/users?page=2");
+    setData(resonse.data.data);
+  };
+  useEffect(() => {
+    storiesDetails();
+  }, []);
   return (
     <>
-      <div className="d-flex" id="story">
+      <div className="d-flex gap-2" id="story">
         <div>
           <Card style={{ height: "214px" }}>
             <Card.Body>
@@ -92,31 +33,33 @@ const Stories = () => {
               />
               <div
                 style={{
-                  color: "#fff",
+                  color: "white !important",
                   position: "relative",
                   bottom: "15px",
                   display: "flex",
                   flexDirection: "column",
                   gap: "5px",
-
                   justifyContent: "center",
                   alignItems: "center",
-                  color: "red",
                 }}
               >
-                <BsHouseCheck></BsHouseCheck>
-                <span>Jenish Limbu</span>
+                <GrAddCircle
+                  style={{ background: "blue", color: "white" }}
+                ></GrAddCircle>
+                <span>Create Story</span>
               </div>
             </Card.Body>
           </Card>
         </div>
 
-        {storiesDetails.map((val) => (
-          <Storiescard
-            name={val.storyName}
-            imgName={val.img}
-            profile={val.profile}
-          />
+        {data.map((val) => (
+          <div key={val.id}>
+            <Storiescard
+              name={val.first_name}
+              imgName={val.avatar}
+              profile={val.avatar}
+            />
+          </div>
         ))}
       </div>
     </>

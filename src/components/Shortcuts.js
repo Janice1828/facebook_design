@@ -1,5 +1,11 @@
 import React from "react";
 import { BiSolidUser } from "react-icons/bi";
+import { FaUserFriends } from "react-icons/fa";
+import { MdGroups } from "react-icons/md";
+import { FaNewspaper } from "react-icons/fa";
+import { GiBlockHouse } from "react-icons/gi";
+import { GiBackwardTime } from "react-icons/gi";
+import { IoIosArrowDropdown } from "react-icons/io";
 const Shortcuts = () => {
   return (
     <>
@@ -9,27 +15,27 @@ const Shortcuts = () => {
           <h6>Jenish Imsong Limbu</h6>
         </div>
         <div className="d-flex gap-2 align-items-center">
-          <BiSolidUser size="25px" />
+          <FaUserFriends size="25px" />
           <h6>Friends</h6>
         </div>
         <div className="d-flex gap-2 align-items-center">
-          <BiSolidUser size="25px" />
+          <MdGroups size="25px" />
           <h6>Groups</h6>
         </div>
         <div className="d-flex gap-2 align-items-center">
-          <BiSolidUser size="25px" />
-          <h6>Feeds(Most Recent)</h6>
+          <FaNewspaper size="25px" />
+          <h6>Feeds</h6>
         </div>
         <div className="d-flex gap-2 align-items-center">
-          <BiSolidUser size="25px" />
+          <GiBlockHouse size="25px" />
           <h6>Marketplace</h6>
         </div>
         <div className="d-flex gap-2 align-items-center">
-          <BiSolidUser size="25px" />
+          <GiBackwardTime size="25px" />
           <h6>Memories</h6>
         </div>
         <div className="d-flex gap-2 align-items-center">
-          <BiSolidUser size="25px" />
+          <IoIosArrowDropdown size="25px" />
           <h6>See More</h6>
         </div>
         <div className="border-shortcut"></div>

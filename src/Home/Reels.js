@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { Card } from "react-bootstrap";
 import profile from "../img/blog-1.jpg";
 import storyImg from "../img/team-2.jpg";
 import person from "../img/team-3.jpg";
 import { BsHouseCheck } from "react-icons/bs";
-const Storiescard = (props) => {
+import { GrAddCircle } from "react-icons/gr";
+import axios from "axios";
+
+const Reelscard = (props) => {
   return (
     <div>
       <Card>
@@ -41,60 +45,39 @@ const Storiescard = (props) => {
     </div>
   );
 };
-const storiesDetails = [
-  {
-    storyName: "Tej maya Limbu",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Maya Imsong",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Sushma Imsong",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Bishnu Chemjong",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Dipa Rai",
-    img: storyImg,
-    profile: profile,
-  },
-  {
-    storyName: "Madan Chemjong",
-    img: storyImg,
-    profile: profile,
-  },
-];
+
 const Reels = () => {
+  const postQuery = useQuery({
+    queryKey: ["posts"],
+    queryFn: async () => {
+      const response = await axios.get("https://reqres.in/api/users?page=1");
+      const data = await response.data.data;
+      return data;
+    },
+  });
+  if (postQuery.isLoading) return <h1>Loading....</h1>;
+  if (postQuery.isError) return <h1>Error loading data!!!</h1>;
   return (
     <>
       <div className="d-flex" id="story">
         <div>
           <Card style={{ height: "214px" }}>
             <Card.Body>
-              <img
-                src={profile}
-                alt="Stories Img"
-                height="150px"
-                width="125px"
+              <div
                 style={{
+                  borderRadius: "10px",
                   borderTopRightRadius: "10px",
-                  borderTopRightRadius: "10px",
+                  height: "100%",
+                  width: "125px",
+                  background: "red",
                 }}
-              />
+              ></div>
+
               <div
                 style={{
                   color: "#fff",
                   position: "relative",
-                  bottom: "15px",
+                  bottom: "55px",
                   display: "flex",
                   flexDirection: "column",
                   gap: "5px",
@@ -104,19 +87,23 @@ const Reels = () => {
                   color: "red",
                 }}
               >
-                <BsHouseCheck></BsHouseCheck>
-                <span>Jenish Limbu</span>
+                <GrAddCircle
+                  style={{ background: "blue", color: "white" }}
+                ></GrAddCircle>
+                <span>Create Reels</span>
               </div>
             </Card.Body>
           </Card>
         </div>
 
-        {storiesDetails.map((val) => (
-          <Storiescard
-            name={val.storyName}
-            imgName={val.img}
-            profile={val.profile}
-          />
+        {postQuery.data.map((item) => (
+          <div key={item.id}>
+            <Reelscard
+              name={item.full_name}
+              imgName={item.avatar}
+              profile={item.avatar}
+            />
+          </div>
         ))}
       </div>
     </>

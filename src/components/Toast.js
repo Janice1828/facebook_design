@@ -78,15 +78,17 @@ const DismissibleExample = () => {
   return (
     <>
       {newsFeedContent.map((val) => (
-        <Contentnews
-          profilePicture={val.profile}
-          content={val.content}
-          contentImage={val.image}
-          like={val.like}
-          share={val.share}
-          comment={val.comment}
-          name={val.name}
-        />
+        <div key={val.id}>
+          <Contentnews
+            profilePicture={val.profile}
+            content={val.content}
+            contentImage={val.image}
+            like={val.like}
+            share={val.share}
+            comment={val.comment}
+            name={val.name}
+          />
+        </div>
       ))}
     </>
   );

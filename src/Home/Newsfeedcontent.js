@@ -3,6 +3,7 @@ import ronb from "../img/ronb.jpg";
 
 const newsFeedContent = [
   {
+    id: 1,
     profile: ronb,
     name: "Routine Of Nepal Banda",
     image: ronb,
@@ -13,6 +14,7 @@ const newsFeedContent = [
     coment: "20 comments",
   },
   {
+    id: 2,
     profile: ronb,
     name: "Intern Sathi",
     image: ronb,
@@ -21,6 +23,7 @@ const newsFeedContent = [
     coment: "20 comments",
   },
   {
+    id: 3,
     profile: ronb,
     name: "Intern Nepal",
     image: ronb,
@@ -31,6 +34,7 @@ const newsFeedContent = [
     coment: "20 comments",
   },
   {
+    id: 4,
     profile: ronb,
     name: "Jenish Limbu",
     image: ronb,
@@ -41,6 +45,7 @@ const newsFeedContent = [
     coment: "20 comments",
   },
   {
+    id: 5,
     profile: ronb,
     name: "Sushant Kc",
     image: ronb,
@@ -51,6 +56,7 @@ const newsFeedContent = [
     coment: "20 comments",
   },
   {
+    id: 6,
     profile: ronb,
     name: "Janice Limbu",
     image: ronb,
@@ -61,6 +67,7 @@ const newsFeedContent = [
     coment: "20 comments",
   },
   {
+    id: 7,
     profile: ronb,
     name: "Kevin powell",
     image: ronb,
