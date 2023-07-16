@@ -10,7 +10,7 @@ import axios from "axios";
 
 const Reelscard = (props) => {
   return (
-    <div>
+    <div className="">
       <Card>
         <Card.Body>
           <img
@@ -59,10 +59,10 @@ const Reels = () => {
   if (postQuery.isError) return <h1>Error loading data!!!</h1>;
   return (
     <>
-      <div className="d-flex" id="story">
+      <div className="d-flex gap-2" id="story">
         <div>
-          <Card style={{ height: "214px" }}>
-            <Card.Body>
+          <Card style={{ height: "214px", border: "none" }}>
+            <Card.Body className="p-0">
               <div
                 style={{
                   borderRadius: "10px",
