@@ -17,7 +17,7 @@
   display: block;
   position: absolute;
   bottom: -18px;
-  border-bottom: 3px solid hsl(214, 89%, 52%);
+  /* border-bottom: 3px solid hsl(214, 89%, 52%); */
   padding-bottom: 20px;
 }
 .reelsstories .active {
@@ -30,7 +30,7 @@
   width: 220px;
   display: block;
   position: absolute;
-  border-bottom: 3px solid hsl(214, 89%, 52%);
+  /* border-bottom: 3px solid hsl(214, 89%, 52%); */
   padding-bottom: 20px;
   margin-left: 38px;
   top: 111px;
@@ -89,9 +89,16 @@
   padding: 4px;
 }
 #story {
-  overflow-x: scroll;
+  overflow-x: hidden;
+}
+.owl-dots,
+.owl-nav {
+  display: none;
 }
 #inp input {
   width: 36em;
   border-radius: 20px;
+}
+#add {
+  color: white !important;
 }

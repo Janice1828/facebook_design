@@ -43,9 +43,7 @@ const Stories = () => {
                   alignItems: "center",
                 }}
               >
-                <GrAddCircle
-                  style={{ background: "blue", color: "white" }}
-                ></GrAddCircle>
+                <GrAddCircle style={{ color: "white" }}></GrAddCircle>
                 <span>Create Story</span>
               </div>
             </Card.Body>

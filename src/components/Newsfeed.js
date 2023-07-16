@@ -10,6 +10,7 @@ import { BiSolidUser } from "react-icons/bi";
 import DismissibleExample from "./Toast";
 import Stories from "../Home/Stories";
 import Reels from "../Home/Reels";
+import Owlcarouse from "../Home/Owlcarouse";
 const Newsfeed = () => {
   const [modalShow, setModalShow] = React.useState(false);
 

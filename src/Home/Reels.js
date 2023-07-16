@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "react-bootstrap";
-import profile from "../img/blog-1.jpg";
-import storyImg from "../img/team-2.jpg";
-import person from "../img/team-3.jpg";
-import { BsHouseCheck } from "react-icons/bs";
 import { GrAddCircle } from "react-icons/gr";
 import axios from "axios";
-
+import { IconContext } from "react-icons";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 const Reelscard = (props) => {
   return (
     <div className="">
@@ -69,7 +68,7 @@ const Reels = () => {
                   borderTopRightRadius: "10px",
                   height: "100%",
                   width: "125px",
-                  background: "red",
+                  background: "#f2774c",
                 }}
               ></div>
 
@@ -81,30 +80,44 @@ const Reels = () => {
                   display: "flex",
                   flexDirection: "column",
                   gap: "5px",
-
                   justifyContent: "center",
                   alignItems: "center",
                   color: "red",
                 }}
               >
-                <GrAddCircle
-                  style={{ background: "blue", color: "white" }}
-                ></GrAddCircle>
-                <span>Create Reels</span>
+                <IconContext.Provider
+                  value={{
+                    size: "20px",
+                    background: "white",
+                    color: "white",
+                  }}
+                >
+                  <div>
+                    <GrAddCircle id="add"></GrAddCircle>
+                  </div>
+                </IconContext.Provider>
+                <span style={{ color: "#fff" }}>Create Reels</span>
               </div>
             </Card.Body>
           </Card>
         </div>
-
-        {postQuery.data.map((item) => (
-          <div key={item.id}>
-            <Reelscard
-              name={item.full_name}
-              imgName={item.avatar}
-              profile={item.avatar}
-            />
-          </div>
-        ))}
+        <OwlCarousel
+          items={3}
+          className="owl-theme rtl"
+          loop={false}
+          nav
+          margin={8}
+        >
+          {postQuery.data.map((item) => (
+            <div key={item.id}>
+              <Reelscard
+                name={item.full_name}
+                imgName={item.avatar}
+                profile={item.avatar}
+              />
+            </div>
+          ))}
+        </OwlCarousel>
       </div>
     </>
   );
