@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 const Storiescard = (props) => {
   return (
     <div>
-      <Card style={{ cursor: "pointer" }}>
+      <Card style={{ cursor: "pointer", height: "230px" }}>
         <Card.Body>
           <img
             src={props.imgName}
@@ -26,8 +26,8 @@ const Storiescard = (props) => {
             style={{
               color: "#fff",
               position: "absolute",
-              left: "28px",
-              bottom: "22px",
+              left: "85px",
+              bottom: "38px",
             }}
           >
             {props.name}

@@ -4,6 +4,9 @@ import profile from "../img/people10.jpg";
 import { GrAdd } from "react-icons/gr";
 import { GrAddCircle } from "react-icons/gr";
 import { BsHouseCheck } from "react-icons/bs";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import axios from "axios";
 import Storiescard from "./Storiescard";
 const Stories = () => {
@@ -19,7 +22,7 @@ const Stories = () => {
     <>
       <div className="d-flex gap-2" id="story">
         <div>
-          <Card style={{ height: "214px" }}>
+          <Card style={{ height: "230px" }}>
             <Card.Body>
               <img
                 src={profile}
@@ -49,16 +52,23 @@ const Stories = () => {
             </Card.Body>
           </Card>
         </div>
-
-        {data.map((val) => (
-          <div key={val.id}>
-            <Storiescard
-              name={val.first_name}
-              imgName={val.avatar}
-              profile={val.avatar}
-            />
-          </div>
-        ))}
+        <OwlCarousel
+          items={3}
+          className="owl-theme rtl"
+          loop={false}
+          nav
+          margin={8}
+        >
+          {data.map((val) => (
+            <div key={val.id}>
+              <Storiescard
+                name={val.first_name}
+                imgName={val.avatar}
+                profile={val.avatar}
+              />
+            </div>
+          ))}
+        </OwlCarousel>
       </div>
     </>
   );
