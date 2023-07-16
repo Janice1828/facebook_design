@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import profile from "../img/people10.jpg";
-import { GrAdd } from "react-icons/gr";
 import { GrAddCircle } from "react-icons/gr";
-import { BsHouseCheck } from "react-icons/bs";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";

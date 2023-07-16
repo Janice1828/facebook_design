@@ -1,5 +1,4 @@
 import React from "react";
-import goods from "../img/blog-1.jpg";
 import Marketdata from "./MarketData";
 const MarketCard = (props) => {
   return (

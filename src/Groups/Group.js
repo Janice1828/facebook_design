@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Contacts from "../components/Contacts";
 import { Container } from "react-bootstrap";
 import Groupcontent from "../pageContent/Groupcontent";
 import Groupssetting from "./Groupssetting";

@@ -1,81 +1,71 @@
-import React from "react";
-import ronb from "../img/ronb.jpg";
+import React, { useState } from "react";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Toast from "react-bootstrap/Toast";
+function Contentnews(props) {
+  const [showA, setShowA] = useState(true);
+  const toggleShowA = () => setShowA(!showA);
+  return (
+    <div
+      style={{
+        width: "100%",
 
-const newsFeedContent = [
-  {
-    id: 1,
-    profile: ronb,
-    name: "Routine Of Nepal Banda",
-    image: ronb,
-    like: "Jenish Limbu and 5.5k others",
-    share: "10 Shares",
-    content:
-      " नेपाल आयल निगमले एक वर्षमा २४ अर्ब कमाएर भारतीय आयल निगमक ऋण तिरेको छ भने अब स्वचालित मूल्य लागू गर्ने पनि तयारी गरेको छ ।",
-    coment: "20 comments",
-  },
-  {
-    id: 2,
-    profile: ronb,
-    name: "Intern Sathi",
-    image: ronb,
-    like: "Jenish Limbu and 5.5k others",
-    share: "10 Shares",
-    coment: "20 comments",
-  },
-  {
-    id: 3,
-    profile: ronb,
-    name: "Intern Nepal",
-    image: ronb,
-    content: "Lorme Ipsum",
-
-    like: "Jenish Limbu and 5.5k others",
-    share: "10 Shares",
-    coment: "20 comments",
-  },
-  {
-    id: 4,
-    profile: ronb,
-    name: "Jenish Limbu",
-    image: ronb,
-    content: "Lorme Ipsum",
-
-    like: "Jenish Limbu and 5.5k others",
-    share: "10 Shares",
-    coment: "20 comments",
-  },
-  {
-    id: 5,
-    profile: ronb,
-    name: "Sushant Kc",
-    image: ronb,
-    content: "Lorme Ipsum",
-
-    like: "Jenish Limbu and 5.5k others",
-    share: "10 Shares",
-    coment: "20 comments",
-  },
-  {
-    id: 6,
-    profile: ronb,
-    name: "Janice Limbu",
-    image: ronb,
-    like: "Jenish Limbu and 5.5k others",
-    share: "10 Shares",
-    content: "Lorme Ipsum",
-
-    coment: "20 comments",
-  },
-  {
-    id: 7,
-    profile: ronb,
-    name: "Kevin powell",
-    image: ronb,
-    content: "Lorme Ipsum",
-
-    like: "Jenish Limbu and 5.5k others",
-    share: "10 Shares",
-    coment: "20 comments",
-  },
-];
-export default newsFeedContent;
+        padding: "0px",
+        boxSizing: "border-box",
+        marginTop: "20px",
+      }}
+    >
+      <Row style={{ padding: "0px", margin: "0px" }}>
+        <Col className="mb-2 p-0 w-100">
+          <Toast
+            show={showA}
+            onClose={toggleShowA}
+            style={{ width: "100%", padding: "0px" }}
+          >
+            <Toast.Header className="d-flex justify-content-between align-items-center border-0">
+              <div className="d-flex gap-1">
+                <img
+                  src={props.profilePicture}
+                  alt="RONB"
+                  height="40px"
+                  width="40px"
+                  style={{ borderRadius: "50%" }}
+                />
+                <strong style={{ fontSize: "15px" }}>{props.name}</strong>
+              </div>
+            </Toast.Header>
+            <Toast.Body className="w-100 py-0">
+              <p>{props.content}</p>
+              <img
+                src={props.contentImage}
+                alt="Img Routine"
+                style={{ height: "width:100%", width: "100%" }}
+              />
+            </Toast.Body>
+            <div className="d-flex justify-content-between px-3">
+              <div>{props.like}</div>
+              <div className="d-flex gap-2">
+                <div>{props.comment}</div>
+                <div>{props.share}</div>
+              </div>
+            </div>
+            <hr />
+            <div className="d-flex justify-content-around">
+              <button type="" id="like">
+                Like
+              </button>
+              <button type="" id="comment">
+                Comment
+              </button>
+              <button type="" id="share">
+                Share
+              </button>
+            </div>
+            <hr></hr>
+          </Toast>
+        </Col>
+      </Row>
+    </div>
+  );
+}
+export default Contentnews;

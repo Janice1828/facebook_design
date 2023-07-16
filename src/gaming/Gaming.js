@@ -1,8 +1,5 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Shortcuts from "../components/Shortcuts";
-import Newsfeed from "../components/Newsfeed";
-import Contacts from "../components/Contacts";
 import { Container } from "react-bootstrap";
 import Gamingcontent from "./Gamingcontent";
 import Gamingsetting from "./Gamingsetting";

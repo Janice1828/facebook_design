@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "react-bootstrap";
 import { GrAddCircle } from "react-icons/gr";
@@ -51,6 +51,7 @@ const Reels = () => {
     queryFn: async () => {
       const response = await axios.get("https://reqres.in/api/users?page=1");
       const data = await response.data.data;
+
       return data;
     },
   });

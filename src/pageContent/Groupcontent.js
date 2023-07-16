@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col, Card, Button } from "react-bootstrap";
-import groupImg from "../img/feature.jpg";
 import Groupdata from "../Groups/Groupdata";
 const Groupcard = (props) => {
   return (
