@@ -102,3 +102,12 @@
 #add {
   color: white !important;
 }
+.likeIcon {
+  font-size: 23px;
+}
+.shareIcon {
+  font-size: 23px;
+}
+.commentIcon {
+  font-size: 18px;
+}
