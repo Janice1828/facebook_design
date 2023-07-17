@@ -1,42 +1,41 @@
-import React from "react";
-import Marketdata from "./MarketData";
-const MarketCard = (props) => {
-  return (
-    <>
-      <div>
-        <div className="d-flex flex-column">
-          <img
-            src={props.image}
-            alt="goods"
-            width="200px"
-            height="230px"
-            style={{ borderRadius: "20px" }}
-          />
-          <div className="">
-            <strong>{props.price}</strong>
-            <p>{props.title}</p>
-            <small>{props.location}</small>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+import React, { useEffect, useState } from "react";
+import MarketCard from "./MarketContentCard";
+import { MdLocationPin } from "react-icons/md";
+import axios from "axios";
 const Marketcontent = () => {
+  const [Marketdata, setMarketData] = useState([]);
+  const MarketdataFunction = async () => {
+    const response = await axios.get("https://fakestoreapi.com/products");
+    setMarketData(response.data);
+  };
+  useEffect(() => {
+    MarketdataFunction();
+  }, []);
   return (
     <>
-      <div className="d-flex justify-content-between">
-        <h6>Today's Picks</h6>
-        <p>Kathmandu . 65 km</p>
+      <div className="d-flex justify-content-between mb-4">
+        <h5>Today's Picks</h5>
+        <p className="marketLocation">
+          <MdLocationPin></MdLocationPin> Kathmandu . 65 km
+        </p>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "25% 25% 25% 25%" }}>
+      <hr />
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "25% 25% 25% 25%",
+          marginTop: "50px",
+        }}
+      >
         {Marketdata.map((val) => (
-          <MarketCard
-            title={val.title}
-            price={val.cost}
-            location={val.location}
-            image={val.image}
-          />
+          <div key={val.id}>
+            <MarketCard
+              title={val.title}
+              price={val.price}
+              location={val.location}
+              image={val.image}
+            />
+          </div>
         ))}
       </div>
     </>

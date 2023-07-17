@@ -9,15 +9,12 @@ const DismissibleExample = () => {
   const getProduct = async () => {
     const response = await axios.get("https://fakestoreapi.com/products");
     setData(response.data);
-
-    console.log("Test");
   };
   useEffect(() => {
     getProduct();
   }, []);
   return (
     <>
-      {console.log(data)}
       {data.map((val) => (
         <div key={val.id}>
           <Contentnews

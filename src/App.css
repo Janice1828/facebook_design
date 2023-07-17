@@ -111,3 +111,14 @@
 .commentIcon {
   font-size: 18px;
 }
+.marketSettingCol {
+  cursor: pointer;
+  padding: 5px 0px;
+}
+.marketSettingCol:hover {
+  background: rgb(226, 225, 225);
+  transition: 0.5s;
+}
+.marketLocation {
+  color: hsl(214, 89%, 52%);
+}
