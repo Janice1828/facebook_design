@@ -9,11 +9,11 @@ const Group = () => {
     <>
       <Container fluid>
         <Navbar />
-        <div className="row">
+        <div className="row gap-5">
           <div className="col-3">
             <Groupssetting />
           </div>
-          <div className="col-6">
+          <div className="col-5">
             <Groupcontent />
           </div>
           <div className="col-3">
