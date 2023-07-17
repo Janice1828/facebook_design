@@ -12,7 +12,7 @@ const Gaming = () => {
           <div className="col-3">
             <Gamingsetting />
           </div>
-          <div className="col-9">
+          <div className="col-9 px-5">
             <Gamingcontent />
           </div>
         </div>

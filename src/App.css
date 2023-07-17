@@ -125,3 +125,14 @@
 .marketLocation {
   color: hsl(214, 89%, 52%);
 }
+.gamesIcon {
+  font-size: 20px;
+}
+.gameCol {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.gameCol:hover {
+  background: rgb(225, 225, 225);
+  transition: 0.3s;
+}
