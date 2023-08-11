@@ -15,7 +15,7 @@ import { NavLink } from "react-router-dom";
 function TextControlsExample() {
   return (
     <>
-      <Row className="px-4 py-3 shadow align-items-center mb-3 position-sticky top-0 nav">
+      <Row className="px-4 py-2 shadow align-items-center mb-3 position-sticky top-0 nav ">
         <Col className="d-flex gap-2">
           <FaFacebook size="40px" color="#3b5998"></FaFacebook>
           <Form>

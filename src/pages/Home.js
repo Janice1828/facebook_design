@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Container fluid>
         <Navbar />
-        <div className="row">
+        <div className="row pt-4 mt-3">
           <div className="col-3">
             <div className="position-fixed shortcut">
               <Shortcuts />
