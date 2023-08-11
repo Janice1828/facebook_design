@@ -136,3 +136,8 @@
   background: rgb(225, 225, 225);
   transition: 0.3s;
 }
+.shortcutsImg{
+  height:30px;
+  width:30px;
+  border-radius: 50%;
+}
