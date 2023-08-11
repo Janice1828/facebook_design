@@ -17,8 +17,8 @@ const Storiescard = (props) => {
             alt="Profile"
             style={{
               position: "absolute",
-              left: "26px",
-              bottom: "140px",
+              left: "15px",
+              bottom: "175px",
             }}
             id="profileImg"
           />

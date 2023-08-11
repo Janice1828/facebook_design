@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Card } from "react-bootstrap";
 import profile from "../img/people/team-3.jpg";
 import { GrAddCircle } from "react-icons/gr";
-import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import axios from "axios";
 import Storiescard from "./Storiescard";
 import four from "../img/people/four.jpg"
 import two from "../img/people/two.jpg"
 import three from "../img/people/three.jpg"
-import five from "../img/people/five.jpg"
 const Stories = () => {
   const data=[
     {
@@ -64,7 +61,7 @@ const Stories = () => {
           </Card>
         </div>
        
-          {data.map((val) => (
+          {data.map((val, key) => (
             <div key={val.id}>
               <Storiescard
                 name={val.first_name}

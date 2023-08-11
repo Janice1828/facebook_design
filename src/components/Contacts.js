@@ -1,5 +1,4 @@
 import React from "react";
-import { BiSolidUser } from "react-icons/bi";
 import one from "../img/people/one.jpg";
 import two from "../img/people/two.jpg"
 import three from "../img/people/three.jpg"
@@ -10,7 +9,6 @@ import seven from "../img/people/seven.jpg"
 import eight from "../img/people/eight.jpg"
 import nine from "../img/people/people10.jpg";
 import ten from "../img/people/team-1.jpg";
-
 import eleven from "../img/people/team-2.jpg";
 import twelve from "../img/people/team-3.jpg";
 import thirteen from "../img/people/team-4.jpg";

@@ -10,22 +10,21 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 const Reelscard = (props) => {
   return (
     <div className="">
-      <Card>
-        <Card.Body>
+      <Card className="p-0">
+        <Card.Body className="p-0">
           <img
             src={props.imgName}
             alt="Stories Img"
-            height="180px"
-            width="125px"
-            style={{ borderRadius: "10px" }}
+            height="214px"
+            style={{ borderRadius: "10px", width:"140px !important" }}
           />
           <img
             src={props.profile}
             alt="Profile"
             style={{
               position: "absolute",
-              left: "26px",
-              bottom: "140px",
+              left: "20px",
+              bottom: "160px",
             }}
             id="profileImg"
           />
@@ -68,7 +67,7 @@ const Reels = () => {
                   borderRadius: "10px",
                   borderTopRightRadius: "10px",
                   height: "100%",
-                  width: "125px",
+                  width: "140px",
                   background: "#f2774c",
                 }}
               ></div>
@@ -77,7 +76,7 @@ const Reels = () => {
                 style={{
                   color: "#fff",
                   position: "relative",
-                  bottom: "55px",
+                  bottom: "65px",
                   display: "flex",
                   flexDirection: "column",
                   gap: "5px",
