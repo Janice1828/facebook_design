@@ -92,6 +92,7 @@
 }
 #story {
   overflow-x: hidden;
+  gap:8px;
 }
 .owl-dots,
 .owl-nav {
