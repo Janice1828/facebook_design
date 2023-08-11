@@ -9,12 +9,13 @@ import { CgGames } from "react-icons/cg";
 import { IoMdNotifications } from "react-icons/io";
 import { BsMessenger } from "react-icons/bs";
 import { BiSolidUser } from "react-icons/bi";
+import jenish from "../img/home/jenish.jpg";
 import { IconContext } from "react-icons";
 import { NavLink } from "react-router-dom";
 function TextControlsExample() {
   return (
     <>
-      <Row className="px-4 py-2 shadow align-items-center mb-3 position-sticky top-0 nav">
+      <Row className="px-4 py-3 shadow align-items-center mb-3 position-sticky top-0 nav">
         <Col className="d-flex gap-2">
           <FaFacebook size="40px" color="#3b5998"></FaFacebook>
           <Form>
@@ -30,16 +31,16 @@ function TextControlsExample() {
         <Col className="d-flex justify-content-around navlink">
           <IconContext.Provider value={{}}>
             <NavLink to="/" id="navLink">
-              <AiFillHome></AiFillHome>
+              <AiFillHome className="navMiddlleIcon"></AiFillHome>
             </NavLink>
             <NavLink to="/market" id="navLink">
-              <GiBlockHouse></GiBlockHouse>
+              <GiBlockHouse className="navMiddlleIcon"></GiBlockHouse>
             </NavLink>
             <NavLink to="/group" id="navLink">
-              <HiUserGroup></HiUserGroup>
+              <HiUserGroup className="navMiddlleIcon"></HiUserGroup>
             </NavLink>
             <NavLink to="/gaming" id="navLink">
-              <CgGames></CgGames>
+              <CgGames className="navMiddlleIcon"></CgGames>
             </NavLink>
           </IconContext.Provider>
         </Col>
@@ -48,7 +49,7 @@ function TextControlsExample() {
             value={{
               color: "#000",
               size: "25px",
-              className: "bg-secondary bg-opacity-50",
+              className: "bg-secondary bg-opacity-25",
             }}
           >
             <TbGridDots className="navIcons"></TbGridDots>
@@ -56,7 +57,7 @@ function TextControlsExample() {
             <BsMessenger className="navIcons"></BsMessenger>
 
             <IoMdNotifications className="navIcons"></IoMdNotifications>
-            <BiSolidUser className="navIcons"></BiSolidUser>
+            <img src={jenish} alt="Profile Picture" id="profilePicture"/>
           </IconContext.Provider>
         </Col>
       </Row>

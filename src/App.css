@@ -46,12 +46,11 @@
 }
 .active {
   color: hsl(214, 89%, 52%) !important;
-  /* background: red; */
 }
 .navIcons {
-  height: 34px;
-  width: 34px;
-  padding: 8px;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
   border-radius: 50%;
 }
 .nav {
@@ -145,4 +144,13 @@
   height:40px;
   width:40px;
   border-radius: 50%;
+}
+#profilePicture{
+  height:40px;
+  width:40px;
+  border-radius: 50%;
+}
+.navMiddlleIcon{
+  height:30px;
+  width:30px;
 }
