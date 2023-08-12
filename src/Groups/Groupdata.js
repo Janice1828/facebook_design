@@ -1,11 +1,16 @@
 import groupImg from "../img/team-1.jpg";
+import internsathi from "../img/groups/internsathiImg.png"
+import  internnepal from "../img/groups/internnepal.jpg"
+import ronb from "../img/home/ronb.jpg";
+import confession from "../img/groups/confession.jpg";
+
 const Groupdata = [
   {
     groupName: "Intern Sathi",
     userName: "Jenish Limbu",
     content:
       "Join our winning team! Codavatar is hiring for various positions and looking for talented individuals to be part of our success story. Apply now and take the first step towards an exciting and rewarding career with us.Don miss out on this incredible opportunity! Apply at vacancy@codavatar.com. *Remember to define the subject line to the job for which you are applying.*#Hiring #team #careerOpportunity",
-    image: groupImg,
+    image: internsathi,
     like: "Samir Shrestha and 3k others",
     comment: "20 comments",
     shares: "20 shares",
@@ -15,7 +20,7 @@ const Groupdata = [
     userName: "Jenish Limbu",
     content:
       "Join our winning team! Codavatar is hiring for various positions and looking for talented individuals to be part of our success story. Apply now and take the first step towards an exciting and rewarding career with us.Don miss out on this incredible opportunity! Apply at vacancy@codavatar.com. *Remember to define the subject line to the job for which you are applying.*#Hiring #team #careerOpportunity",
-    image: groupImg,
+    image: internnepal,
     like: "Samir Shrestha and 3k others",
     comment: "20 comments",
     shares: "20 shares",
@@ -25,7 +30,7 @@ const Groupdata = [
     userName: "Jenish Limbu",
     content:
       "Join our winning team! Codavatar is hiring for various positions and looking for talented individuals to be part of our success story. Apply now and take the first step towards an exciting and rewarding career with us.Don miss out on this incredible opportunity! Apply at vacancy@codavatar.com. *Remember to define the subject line to the job for which you are applying.*#Hiring #team #careerOpportunity",
-    image: groupImg,
+    image: ronb,
     like: "Samir Shrestha and 3k others",
     comment: "20 comments",
     shares: "20 shares",
@@ -35,7 +40,7 @@ const Groupdata = [
     userName: "Jenish Limbu",
     content:
       "Join our winning team! Codavatar is hiring for various positions and looking for talented individuals to be part of our success story. Apply now and take the first step towards an exciting and rewarding career with us.Don miss out on this incredible opportunity! Apply at vacancy@codavatar.com. *Remember to define the subject line to the job for which you are applying.*#Hiring #team #careerOpportunity",
-    image: groupImg,
+    image: confession,
     like: "Samir Shrestha and 3k others",
     comment: "20 comments",
     shares: "20 shares",

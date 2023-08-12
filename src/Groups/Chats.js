@@ -1,5 +1,5 @@
 import React from "react";
-import Imgs from "../img/testimonial-1.jpg";
+import Imgs from "../img/groups/internnepal.jpg";
 import { Card } from "react-bootstrap";
 const Chats = () => {
   return (
@@ -8,7 +8,7 @@ const Chats = () => {
         <Card.Title>
           <h5>Chats You Should Join</h5>
         </Card.Title>
-        <Card.Body>
+        <Card.Body style={{cursor:"pointer"}}>
           <Card.Text className="d-flex align-items-center gap-2">
             <img
               src={Imgs}
@@ -18,7 +18,7 @@ const Chats = () => {
             />
 
             <div>
-              <span>looking for intern to join</span>
+              <span style={{fontWeight:"500"}}>looking for intern to join</span>
               <br />
               <small>click to join</small>
             </div>
