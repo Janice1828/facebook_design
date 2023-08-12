@@ -28,7 +28,7 @@ const Marketcontent = () => {
         }}
       >
         {Marketdata.map((val) => (
-          <div key={val.id}>
+          <div key={val.id} style={{cursor:"pointer"}}>
             <MarketCard
               title={val.title}
               price={val.price}
