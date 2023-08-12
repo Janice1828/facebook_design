@@ -10,7 +10,7 @@ const Gaming = () => {
         <Navbar />
         <div className="row">
           <div className="col-3">
-            <Gamingsetting />
+            <Gamingsetting style={{width:"100% !important", overflow:"hidden"}} />
           </div>
           <div className="col-9 px-5">
             <Gamingcontent />

@@ -52,12 +52,12 @@ function TextControlsExample() {
               className: "bg-secondary bg-opacity-25",
             }}
           >
-            <TbGridDots className="navIcons"></TbGridDots>
+            <TbGridDots className="navIcons cursor-pointer"></TbGridDots>
 
-            <BsMessenger className="navIcons"></BsMessenger>
+            <BsMessenger className="navIcons cursor-pointer"></BsMessenger>
 
-            <IoMdNotifications className="navIcons"></IoMdNotifications>
-            <img src={jenish} alt="Profile Picture" id="profilePicture"/>
+            <IoMdNotifications className="navIcons cursor-pointer"></IoMdNotifications>
+            <img src={jenish} alt="Profile Picture" id="profilePicture" className="cursor-pointer"/>
           </IconContext.Provider>
         </Col>
       </Row>
