@@ -28,10 +28,16 @@ import { SiYoutubegaming } from "react-icons/si";
 import { MdGroups3 } from "react-icons/md";
 
 const Marketsettings = () => {
+  const iconStyle={
+     height:"30px",width:"30px" ,background:"#bcc0bc",padding:"5px", borderRadius:"50%"
+  }
+  const colStyle={
+    display:"flex", gap:"1em",alignItems:"center", cursor:"pointer"
+  }
   return (
     <>
       <div className="marketSetting shadow px-3 marketsettin">
-        <Row className="flex-column gap-2">
+        <Row className="flex-column gap-3">
           <Col>
             <h4 style={{ fontWeight: "700 " }}>Marketplace</h4>
           </Col>
@@ -40,118 +46,119 @@ const Marketsettings = () => {
               <Form.Control
                 className="w-100"
                 placeholder="Search Marketplace"
+              style={{borderRadius:"30px"}}
               ></Form.Control>
             </Form>
           </Col>
-          <Col className="d-flex gap-2">
-            <GiBlockHouse style={{ fontSize: "20px" }}></GiBlockHouse>
+          <Col style={colStyle}>
+            <GiBlockHouse style={iconStyle}></GiBlockHouse>
             <h6>Browse All</h6>
           </Col>
 
-          <Col className="d-flex gap-2">
-            <IoMdNotifications style={{ fontSize: "20px" }}></IoMdNotifications>
+          <Col style={colStyle}>
+            <IoMdNotifications style={iconStyle}></IoMdNotifications>
             <h6> Notifications</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <BsFillInboxFill style={{ fontSize: "20px" }}></BsFillInboxFill>
+          <Col style={colStyle}>
+            <BsFillInboxFill style={iconStyle}></BsFillInboxFill>
             <h6> Inbox</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <AiFillShopping style={{ fontSize: "20px" }}></AiFillShopping>
+          <Col style={colStyle}>
+            <AiFillShopping style={iconStyle}></AiFillShopping>
             <h6> Buying</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <BsFillTagsFill style={{ fontSize: "20px" }}></BsFillTagsFill>
+          <Col style={colStyle}>
+            <BsFillTagsFill style={iconStyle}></BsFillTagsFill>
             <h6> Selling</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <h6> Create new listing</h6>
+          <Col className="d-flex gap-2 cursor-pointer">
+            <h6 style={{background:"#bfe9f4",color:"#3838aa" ,width:"90%", padding:"10px 0px", textAlign:"center"}}> Create new listing</h6>
           </Col>
-          <Col className="d-flex gap-2">
+          <Col className="d-flex gap-2 border-top pt-2">
             <h6> Filters</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <h6> Kathmandu, Nepal. within 65 kilometeres</h6>
+          <Col className="d-flex gap-2 border-bottom pb-2">
+            <h6 style={{color:"hsl(214, 89%, 52%)"}}> Kathmandu, Nepal. within 65 kilometeres</h6>
           </Col>
           <Col className="d-flex gap-2">
             <h6> Categories</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <AiFillCar style={{ fontSize: "20px" }}></AiFillCar>
+          <Col style={colStyle}>
+            <AiFillCar style={iconStyle}></AiFillCar>
             <h6> Vehicles</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <BsFillHouseFill style={{ fontSize: "20px" }}></BsFillHouseFill>
+          <Col style={colStyle}>
+            <BsFillHouseFill style={iconStyle}></BsFillHouseFill>
             <h6> Property Rentals</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <BiSolidTShirt style={{ fontSize: "20px" }}></BiSolidTShirt>
+          <Col style={colStyle}>
+            <BiSolidTShirt style={iconStyle}></BiSolidTShirt>
             <h6> Apparel</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <BsFillTagsFill style={{ fontSize: "20px" }}></BsFillTagsFill>
+          <Col style={colStyle}>
+            <BsFillTagsFill style={iconStyle}></BsFillTagsFill>
             <h6> Classifields</h6>
           </Col>
-          <Col className="d-flex gap-2">
+          <Col style={colStyle}>
             <FaMobileScreenButton
-              style={{ fontSize: "20px" }}
+              style={iconStyle}
             ></FaMobileScreenButton>
             <h6> Electronics</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <MdOutlineGroup style={{ fontSize: "20px" }}></MdOutlineGroup>
+          <Col style={colStyle}>
+            <MdOutlineGroup style={iconStyle}></MdOutlineGroup>
             <h6> Entertainment</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <AiFillHeart style={{ fontSize: "20px" }}></AiFillHeart>
+          <Col style={colStyle}>
+            <AiFillHeart style={{ height:"30px",width:"30px",background:"#bcc0bc",padding:"5px", borderRadius:"50%" }}></AiFillHeart>
             <h6> Family</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <BsTags style={{ fontSize: "20px" }}></BsTags>
+          <Col style={colStyle}>
+            <BsTags style={iconStyle}></BsTags>
             <h6> Free Stuff</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <LuShovel style={{ fontSize: "20px" }}></LuShovel>
+          <Col style={colStyle}>
+            <LuShovel style={iconStyle}></LuShovel>
             <h6> Garden & Outdoor</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <FaPen style={{ fontSize: "20px" }}></FaPen>
+          <Col style={colStyle}>
+            <FaPen style={iconStyle}></FaPen>
             <h6> Hobbies</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <GoHomeFill style={{ fontSize: "20px" }}></GoHomeFill>
+          <Col style={colStyle}>
+            <GoHomeFill style={iconStyle}></GoHomeFill>
             <h6> Home Goods</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <GiAutoRepair style={{ fontSize: "20px" }}></GiAutoRepair>
+          <Col style={colStyle}>
+            <GiAutoRepair style={iconStyle}></GiAutoRepair>
             <h6> Home Improvement Supplies</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <AiFillHome style={{ fontSize: "20px" }}></AiFillHome>
+          <Col style={colStyle}>
+            <AiFillHome style={iconStyle}></AiFillHome>
             <h6> Home Sales</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <FaGuitar style={{ fontSize: "20px" }}></FaGuitar>
+          <Col style={colStyle}>
+            <FaGuitar style={iconStyle}></FaGuitar>
             <h6> Musical Instruments</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <LuTags style={{ fontSize: "20px" }}></LuTags>
+          <Col style={colStyle}>
+            <LuTags style={iconStyle}></LuTags>
             <h6> Office Supplies</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <MdPets style={{ fontSize: "20px" }}></MdPets>
+          <Col style={colStyle}>
+            <MdPets style={iconStyle}></MdPets>
             <h6> Pet Supplies</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <FaPersonRunning style={{ fontSize: "20px" }}></FaPersonRunning>
+          <Col style={colStyle}>
+            <FaPersonRunning style={iconStyle}></FaPersonRunning>
             <h6> Sporting Goods</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <SiYoutubegaming style={{ fontSize: "20px" }}></SiYoutubegaming>
+          <Col style={colStyle}>
+            <SiYoutubegaming style={iconStyle}></SiYoutubegaming>
             <h6> Toys & Games</h6>
           </Col>
-          <Col className="d-flex gap-2">
-            <MdGroups3 style={{ fontSize: "20px" }}></MdGroups3>
+          <Col style={colStyle}>
+            <MdGroups3 style={iconStyle}></MdGroups3>
             <h6> Buy and sell groups</h6>
           </Col>
         </Row>
