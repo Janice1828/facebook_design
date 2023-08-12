@@ -27,17 +27,11 @@ import { GiPuzzle } from "react-icons/gi";
 const Gamingsetting = () => {
   return (
     <div className="marketsettin w-25">
-      <Row className="d-flex flex-column">
+      <Row className="d-flex flex-column gap-2">
         <Col>
           <h6>Gaming</h6>
         </Col>
-        <Col>
-          <h6>
-            <Form>
-              <Form.Control></Form.Control>
-            </Form>
-          </h6>
-        </Col>
+      
         <Col className="d-flex gap-2 gameCol">
           <SiYoutubegaming className="gamesIcon"></SiYoutubegaming>
 

@@ -129,7 +129,11 @@
   color: hsl(214, 89%, 52%);
 }
 .gamesIcon {
-  font-size: 20px;
+ height:30px;
+ width:30px;
+ background:#bcc0bc;
+ padding:5px;
+  border-radius:50%;
 }
 .gameCol {
   padding: 5px 10px;
