@@ -76,12 +76,12 @@ function Contentnews(props) {
                     color: "white",
                     borderRadius: "50%",
                     padding: "3px",
-                    height: "28px",
-                    width: "28px",
+                    height: "20px",
+                    width: "20px",
                   }}
-                ></AiOutlineLike><AiFillHeart style={{ height: "28px",
-                width: "28px",color:"red"}}></AiFillHeart><BiSolidLaugh style={{height: "28px",
-                width: "28px",color:"yellow"}} ></BiSolidLaugh>
+                ></AiOutlineLike><AiFillHeart style={{ height: "20px",
+                width: "20px",color:"red"}}></AiFillHeart><BiSolidLaugh style={{height: "20px",
+                width: "20px",color:"yellow"}} ></BiSolidLaugh>
                </div>
 
                 <span> {props.like} k</span>
