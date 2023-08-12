@@ -5,12 +5,13 @@ import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import ModalInput from "./Modal";
-
-import { BiSolidUser } from "react-icons/bi";
+import profilePicture from "../img/home/jenish.jpg"
 import DismissibleExample from "./Toast";
+import {RiGalleryFill} from "react-icons/ri";
 import Stories from "../Home/Stories";
 import Reels from "../Home/Reels";
-import Owlcarouse from "../Home/Owlcarouse";
+import {BiHappy} from "react-icons/bi";
+import {BsFillCameraReelsFill} from "react-icons/bs"
 const Newsfeed = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -48,25 +49,28 @@ const Newsfeed = () => {
         </Tab.Container>
         <Card className="mt-3" id="inp">
           <Card.Body>
-            <BiSolidUser></BiSolidUser>
+            <div className="d-flex align-items-center">
+           <img src={profilePicture} alt="Image" style={{height:"30px", width:"30px", borderRadius:"50%"}}/>
             <ModalInput
               show={modalShow}
               onHide={() => setModalShow(false)}
-              width="200px"
+              width="180px"
             />
+            </div>
+
             <hr />
             <div className="d-flex justify-content-around">
-              <Card.Text className="d-flex align-items-center gap-2">
-                <BiSolidUser></BiSolidUser>
-                <strong>Live Video</strong>
+              <Card.Text className="d-flex gap-2">
+              <BsFillCameraReelsFill style={{color:"red", height:"25px", width:"25px"}}></BsFillCameraReelsFill>
+                <p>Live Video</p>
               </Card.Text>
-              <Card.Text className="d-flex align-items-center gap-2">
-                <BiSolidUser></BiSolidUser>
-                <strong>Photo/Video</strong>
+              <Card.Text className="d-flex gap-2">
+              <RiGalleryFill style={{color:"green", height:"25px", width:"25px"}}></RiGalleryFill>
+                <p>Photo/Video</p>
               </Card.Text>
-              <Card.Text className="d-flex  align-items-center gap-2">
-                <BiSolidUser></BiSolidUser>
-                <strong>Feeling/Activity</strong>
+              <Card.Text className="d-flex gap-2">
+               <BiHappy style={{color:"yellow", height:"25px", width:"25px"}}></BiHappy>
+                <p>Feeling/Activity</p>
               </Card.Text>
             </div>
           </Card.Body>
