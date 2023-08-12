@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Contentnews from "../Home/Newsfeedcontent";
-import { useQuery } from "@tanstack/react-query";
-
 const DismissibleExample = () => {
-  //     const response = await axios.get("https://fakestoreapi.com/products");
   const [data, setData] = useState([]);
   const getProduct = async () => {
     const response = await axios.get("https://fakestoreapi.com/products");

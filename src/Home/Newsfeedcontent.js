@@ -7,6 +7,8 @@ import { PiShareFatThin } from "react-icons/pi";
 import { AiOutlineLike } from "react-icons/ai";
 import { BiBorderBottom } from "react-icons/bi";
 import { BsGlobeAmericas } from "react-icons/bs";
+import {AiFillHeart} from "react-icons/ai"
+import {BiSolidLaugh} from "react-icons/bi"
 function Contentnews(props) {
   const [showA, setShowA] = useState(true);
   const toggleShowA = () => setShowA(!showA);
@@ -14,20 +16,19 @@ function Contentnews(props) {
     <div
       style={{
         width: "100%",
-
         padding: "0px",
         boxSizing: "border-box",
         marginTop: "20px",
       }}
     >
-      <Row style={{ padding: "0px", margin: "0px" }}>
+      <Row style={{ padding: "0px", margin: "0px",}}>
         <Col className="mb-2 p-0 w-100">
           <Toast
             show={showA}
             onClose={toggleShowA}
-            style={{ width: "100%", padding: "0px" }}
+            style={{ width: "100%", padding: "10px", borderRadius:"10px" }}
           >
-            <Toast.Header className="d-flex justify-content-between align-items-center">
+            <Toast.Header className="d-flex justify-content-between align-items-center border-0">
               <div className="d-flex gap-3">
                 <img
                   src={props.profilePicture}
@@ -48,18 +49,27 @@ function Contentnews(props) {
                   </p>
                 </div>
               </div>
+
             </Toast.Header>
+            
             <Toast.Body className="w-100 py-0">
-              <p>{props.content}</p>
+            <div className="border-bottom">
+              <p class="newsFeedContent">{props.content}</p>
+              </div> 
+            <div className="d-flex justify-content-center border-bottom mb-3">
+              
               <img
                 src={props.contentImage}
                 alt="Img Routine"
-                style={{ height: "450px", width: "100%" }}
+                style={{ height: "450px", width: "70%", textAlign:"center" }}
               />
+            </div>
+
             </Toast.Body>
-            <hr />
             <div className="d-flex justify-content-between px-3">
               <div className="d-flex gap-2 align-items-center">
+               <div className="d-flex">
+                
                 <AiOutlineLike
                   style={{
                     background: "blue",
@@ -69,7 +79,11 @@ function Contentnews(props) {
                     height: "28px",
                     width: "28px",
                   }}
-                ></AiOutlineLike>
+                ></AiOutlineLike><AiFillHeart style={{ height: "28px",
+                width: "28px",color:"red"}}></AiFillHeart><BiSolidLaugh style={{height: "28px",
+                width: "28px",color:"yellow"}} ></BiSolidLaugh>
+               </div>
+
                 <span> {props.like} k</span>
               </div>
               <div className="d-flex gap-2">
@@ -85,7 +99,7 @@ function Contentnews(props) {
                 className="d-flex gap-2 align-items-center"
               >
                 <AiOutlineLike class="likeIcon"></AiOutlineLike>
-                <strong>Like</strong>
+                <span>Like</span>
               </button>
               <button
                 type=""
@@ -93,7 +107,7 @@ function Contentnews(props) {
                 className="d-flex gap-2 align-items-center"
               >
                 <FaRegCommentAlt class="commentIcon"></FaRegCommentAlt>
-                <strong>Comment</strong>
+                <span>Comment</span>
               </button>
               <button
                 type=""
@@ -101,7 +115,7 @@ function Contentnews(props) {
                 className="d-flex gap-2 align-items-center"
               >
                 <PiShareFatThin class="shareIcon"></PiShareFatThin>
-                <strong>Share</strong>
+                <span>Share</span>
               </button>
             </div>
           </Toast>

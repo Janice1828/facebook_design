@@ -22,54 +22,54 @@ const Shortcuts = () => {
        
           <h6>Jenish Imsong Limbu</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
           <FaUserFriends size="25px" style={{color:" hsl(214, 89%, 52%)"
 }}/>
           <h6>Friends</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
           <MdGroups size="25px" style={{background:"hsl(214, 89%, 52%)",borderRadius:"50%", color:"#fff", padding:"2px"}} />
           <h6>Groups</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
           <FaNewspaper size="25px" style={{color:"hsl(214, 89%, 52%)"}} />
           <h6>Feeds</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
           <GiBlockHouse size="25px"  style={{color:"hsl(214, 89%, 52%)"}}/>
           <h6>Marketplace</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
           <GiBackwardTime size="25px" style={{color:"hsl(214, 89%, 52%)"}} />
           <h6>Memories</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
           <IoIosArrowDropdown size="25px" />
           <h6>See More</h6>
         </div>
         <div className="border-shortcut"></div>
         <h6>Your Shortcuts</h6>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
          <img class="shortcutsImg" src={ludo} alt="Ludo Img"/>
           <h6>Ludo Club</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
 <img class="shortcutsImg" src={internSathi} alt="Intern sathi"/>
           <h6>Internsathi</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
 <img class="shortcutsImg" src={internNepal} alt="intern nepal"/>
           <h6>Intern Nepal</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
 <img class="shortcutsImg" src={sanima} alt="Sanima Bank"/>
           <h6>Sanima Bank</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
 <img class="shortcutsImg" src={internGroup} alt="Intern Groups"/>
           <h6>It Intern/Jobs Nepal</h6>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2 align-items-center cursor-pointer">
 <img class="shortcutsImg" src={pool} alt="Pool Image"/>
           <h6>8 Ball Pool</h6>
         </div>
