@@ -17,10 +17,14 @@ const Newsfeed = () => {
 
   return (
     <>
-      <div className="px-4">
+      <div className="px-md-4 px-0">
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-          <Row className="reelsstories">
-            <Col sm={12}>
+          <Row className="reelsstories mx-0">
+          <Col sm={12} className="d-block d-md-none mt-0">
+        <h5 style={{color:"hsl(214, 89%, 52%)"}}>Stories</h5>
+              <hr/>     
+</Col>
+            <Col sm={12} className="d-none d-md-block">
               <Nav variant="" className="d-flex justify-content-around">
                 <Nav.Item>
                   <Nav.Link eventKey="first" className="text-dark">

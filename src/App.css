@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* overflow: hidd; */
 }
 #like,
 #comment,
@@ -100,8 +101,11 @@
   display: none;
 }
 #inp input {
-  width: 33em;
+  width: 100%;
   border-radius: 20px;
+}
+#inp button {
+  width: 100%;
 }
 #add {
   color: white !important;
