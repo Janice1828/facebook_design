@@ -28,7 +28,7 @@ function TextControlsExample() {
             </Form.Label>
           </Form>
         </Col>
-        <Col className="d-flex justify-content-around navlink d-none d-lg-flex">
+        <Col className="d-flex justify-content-around navlink py-3" xl={6}>
           <IconContext.Provider value={{}}>
             <NavLink to="/" id="navLink">
               <AiFillHome className="navMiddlleIcon"></AiFillHome>
