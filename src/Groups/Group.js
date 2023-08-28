@@ -10,13 +10,13 @@ const Group = () => {
       <Container fluid>
         <Navbar />
         <div className="row gap-5">
-          <div className="col-3">
+          <div className="col-0 col-xl-3 d-xl-block d-none">
             <Groupssetting />
           </div>
-          <div className="col-5">
+          <div className="col-xl-5 col-12 px-xl-0 px-5">
             <Groupcontent />
           </div>
-          <div className="col-3">
+          <div className="d-xl-block d-none col-0 col-xl-3">
             <Chats />
           </div>
         </div>
