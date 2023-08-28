@@ -17,9 +17,9 @@ const Gamingcontent = () => {
       <div>
         <h3>Recently Played</h3>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "23% 23% 23% 23%",gridGap:"20px", marginTop:"30px" }}>
+      <div className="row gy-3" style={{ marginTop:"30px" }}>
         {Gamingdata.map((va) => (
-          <div key={va.id}>
+          <div key={va.id} className="col-md-3 col-sm-6 col-12">
             <GamingcontentCard img={va.img} title={va.title} />
           </div>
         ))}

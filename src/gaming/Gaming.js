@@ -9,10 +9,10 @@ const Gaming = () => {
       <Container fluid>
         <Navbar />
         <div className="row">
-          <div className="col-3">
+          <div className="col-0 col-xl-3 d-none d-xl-block">
             <Gamingsetting style={{width:"100% !important", overflow:"hidden"}} />
           </div>
-          <div className="col-9 px-5">
+          <div className="col-xl-9 px-5 col-12">
             <Gamingcontent />
           </div>
         </div>
