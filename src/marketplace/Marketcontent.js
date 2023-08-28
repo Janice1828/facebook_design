@@ -22,13 +22,12 @@ const Marketcontent = () => {
       <hr />
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "25% 25% 25% 25%",
-          marginTop: "50px",
-        }}
+          marginTop: "50px", textAlign:"center"
+        }} className="row"
       >
+        
         {Marketdata.map((val) => (
-          <div key={val.id} style={{cursor:"pointer"}}>
+          <div key={val.id} style={{cursor:"pointer"}} className="col-md-4 col-6">
             <MarketCard
               title={val.title}
               price={val.price}

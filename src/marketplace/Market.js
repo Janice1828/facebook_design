@@ -9,10 +9,10 @@ const Home = () => {
       <Container fluid>
         <Navbar />
         <div className="row">
-          <div className="col-3">
+          <div className="col-xxl-3 col-0 d-none d-xxl-block">
             <Marketsettings />
           </div>
-          <div className="col-9">
+          <div className="col-xxl-9 col-12">
             <Marketcontent />
           </div>
         </div>

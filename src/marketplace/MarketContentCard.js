@@ -2,7 +2,7 @@ const MarketCard = (props) => {
   return (
     <>
       <div className="mb-5">
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column align-items-center">
           <img
             src={props.image}
             alt="goods"
